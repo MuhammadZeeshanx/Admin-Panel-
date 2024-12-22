@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #f8f9fa;
+            width: 250px;
+            height: 100vh;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar a input {
+            margin-right: 10px;
+        }
+
+        /* Main content */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .main-content h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: 300px;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        table thead {
+            background-color: #f0f0f0;
+        }
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .action-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .action-icons span {
+            cursor: pointer;
+            color: #333;
+        }
+        .multi-select input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>GroomAdmin</h2>
+        <ul>
+            <li><a href="#">Dashboard & Metrics</a></li>
+            <li><a href="#">User</a></li>
+            <li><a href="#"><input type="checkbox">Provider Services</a></li>
+            <li><a href="#"><input type="checkbox">Customer Offers</a></li>
+            <li><a href="#"><input type="checkbox">Customer Complaints</a></li>
+            <li><a href="#"><input type="checkbox">Request Reservation</a></li>
+            <li><a href="#"><input type="checkbox">Review</a></li>
+            <li><a href="#">Reports & Analytics</a></li>
+            <li><a href="#" style="color: red;">Setting Option</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>User Management</h1>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <label for="search-user">Search User:</label>
+            <input type="text" id="search-user" placeholder="Enter user name...">
+        </div>
+
+        <!-- User Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th class="multi-select"><input type="checkbox"></th>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Country</th>
+                    <th>City</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Jean Leon</td>
+                    <td>jean.leon@mail.com</td>
+                    <td>Peru</td>
+                    <td>Ica</td>
+                    <td>+919987742489</td>
+                    <td class="action-icons">
+                        <span>&#128065;</span> <!-- View -->
+                        <span>&#128465;</span> <!-- Delete -->
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Natalie Jones</td>
+                    <td>natalie.j@mail.com</td>
+                    <td>United States</td>
+                    <td>Garner</td>
+                    <td>+19194495461</td>
+                    <td class="action-icons">
+                        <span>&#128065;</span>
+                        <span>&#128465;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Midland Mouss</td>
+                    <td>midland@mail.com</td>
+                    <td>Egypt</td>
+                    <td>Cairo</td>
+                    <td>+2001028806262</td>
+                    <td class="action-icons">
+                        <span>&#128065;</span>
+                        <span>&#128465;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>hi hello</td>
+                    <td>hi.hello@mail.com</td>
+                    <td>United States</td>
+                    <td>Apache Junction</td>
+                    <td>+11234567891</td>
+                    <td class="action-icons">
+                        <span>&#128065;</span>
+                        <span>&#128465;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Flutter Developer</td>
+                    <td>flutter.dev@mail.com</td>
+                    <td>India</td>
+                    <td>Indore</td>
+                    <td>+911234567890</td>
+                    <td class="action-icons">
+                        <span>&#128065;</span>
+                        <span>&#128465;</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
